@@ -9,7 +9,7 @@ You just have to download this patch and follow instructions provided by Jouke o
 
 On my side patching the kernel allowed me to properly use the Dell docking station (and connect my 2 monitors and have 2 separate displays) with my Dell Latitude E7450.
 
-Note 1 :
+######Note 1 :
 
 I had to run this command as well (see https://wiki.debian.org/HowToRebuildAnOfficialDebianKernelPackage) to properly rebuild linux-headers-XXX-common package
 
@@ -19,19 +19,18 @@ Then I installed the new patched kernel using :
 
 dpkg -i linux-headers-3.16.0-4+mst.1-amd64_3.16.7-ckt11-1+deb8u3+mst.11_amd64.deb linux-headers-3.16.0-4+mst.1-common_3.16.7-ckt11-1+deb8u3+mst.11_amd64.deb linux-image-3.16.0-4+mst.1-amd64_3.16.7-ckt11-1+deb8u3+mst.11_amd64.deb
 
-Note 2 :
+######Note 2 :
 
 On my side I also installed the latest xserver-xorg-video-intel (2:2.99.917-2~bpo8+1) from Debian backports (https://packages.debian.org/jessie-backports/xserver-xorg-video-intel) as I noticed it was very slow (no acceleration?) with the stable package.
 
 To do that, add : 
 
-#Backports
 deb http://http.debian.net/debian/ jessie-backports main contrib non-free
 
 to your /etc/apt/sources.list
 
 Then :
-sudo apt-get update
-sudo apt-get -t jessie-backports install xserver-xorg-video-intel
 
+`sudo apt-get update`
 
+`sudo apt-get -t jessie-backports install xserver-xorg-video-intel`
