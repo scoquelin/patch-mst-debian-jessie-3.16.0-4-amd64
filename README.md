@@ -13,11 +13,11 @@ On my side patching the kernel allowed me to properly use the Dell docking stati
 
 I had to run this command as well (see https://wiki.debian.org/HowToRebuildAnOfficialDebianKernelPackage) to properly rebuild linux-headers-XXX-common package
 
-fakeroot make -f debian/rules.gen binary-arch_amd64_none_real
+`fakeroot make -f debian/rules.gen binary-arch_amd64_none_real`
 
 Then I installed the new patched kernel using :
 
-dpkg -i linux-headers-3.16.0-4+mst.1-amd64_3.16.7-ckt11-1+deb8u3+mst.11_amd64.deb linux-headers-3.16.0-4+mst.1-common_3.16.7-ckt11-1+deb8u3+mst.11_amd64.deb linux-image-3.16.0-4+mst.1-amd64_3.16.7-ckt11-1+deb8u3+mst.11_amd64.deb
+`dpkg -i linux-headers-3.16.0-4+mst.1-amd64_3.16.7-ckt11-1+deb8u3+mst.11_amd64.deb linux-headers-3.16.0-4+mst.1-common_3.16.7-ckt11-1+deb8u3+mst.11_amd64.deb linux-image-3.16.0-4+mst.1-amd64_3.16.7-ckt11-1+deb8u3+mst.11_amd64.deb`
 
 ######Note 2 :
 
